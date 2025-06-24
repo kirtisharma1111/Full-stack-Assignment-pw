@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+#box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    justify-items: center;
+}
+#box > div{
+    width: 250px;
+    height: 150px;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: green;
+}
+.box3{
+    background-color: blue;
+}
+.box4{
+    background-color: chocolate;
+}
+@media screen and (min-width: 490px) and (max-width: 635px){
+    #box{
+        grid-template-columns: 1fr;
+    }
+}

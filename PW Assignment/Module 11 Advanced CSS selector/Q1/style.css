@@ -1,0 +1,28 @@
+a{
+    color: red;
+    text-decoration: none;
+}
+nav >h2{
+    background-color:black;
+    color: white;
+}
+p:first-of-type{
+    color: blue;
+}
+.active{
+    color: blueviolet;
+    text-decoration: underline;
+}
+a[target="_self"]{
+    background-color: green;
+}
+nav p:last-of-type::after{
+    content: "...";
+}
+nav ul li::marker{
+    color: chocolate;
+}
+nav p:nth-of-type(2)::first-letter{
+    color: red;
+    font-size: 30px;
+}

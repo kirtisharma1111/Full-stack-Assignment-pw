@@ -1,0 +1,33 @@
+<!-- Q8. Create a simple dynamic shopping list with the following features
+ The item should appear in the list?
+ Each item should be given a button that can be pressed to delete that item off the list?
+ The input should be emptied and focused ready for you to enter another item -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping List</title>
+ </head>
+ <body>
+    <input type="text" id="itemInput" placeholder="Enter item"/>
+    <button onclick="addItem()">Add Item</button>
+    <ul id="itemList"></ul>
+    <script>
+        function addItem(){
+            const input=document.getElementById("itemInput");
+            const value = input.value.trim();
+            if(value==="") return;
+            const li = document.createElement("li");
+            li.textContent=value+" ";
+            const btn = document.createElement("button");
+            btn.textContent="Delete";
+            btn.onclick=()=>li.remove();
+            li.appendChild(btn);
+            document.getElementById("itemList").appendChild(li);
+            input.value="";
+            input.focus();
+        }
+    </script>
+ </body>
+ </html>

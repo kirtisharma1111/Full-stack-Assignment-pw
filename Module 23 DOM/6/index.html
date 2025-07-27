@@ -1,0 +1,36 @@
+<!-- Q6. Create a simple image carousel using HTML and JavaScript, Design a basic HTML structure with images,
+and use JavaScript to implement functionality that allows users to navigate through the images. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+</head>
+<body>
+    <h2>Simple Image Carousel</h2>
+    <img id="carousel" src="https://www.computersciencedegreehub.com/wp-content/uploads/2022/08/HTML.jpg" width="300"/>
+    <br/><br/>
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+    <script>
+        let images = [
+        "https://www.computersciencedegreehub.com/wp-content/uploads/2022/08/HTML.jpg",
+        "https://c8.alamy.com/comp/2FKTAF5/css-inscription-against-laptop-and-code-background-technology-concept-learn-programming-language-2FKTAF5.jpg",
+        "https://media.istockphoto.com/id/1284271878/photo/javascript-inscription-against-laptop-and-code-background-learn-javascript-programming.jpg?s=612x612&w=0&k=20&c=H9FI5X3ZBQIyEijvhJc-jv5McwCh-BxqQPxee9Aoa08="
+        ];
+        let i = 0;
+        function showImage(){
+            document.getElementById("carousel").src = images[i];
+        }
+        function nextImage(){
+            i=(i+1)%images.length;
+            showImage();
+        }
+        function prevImage(){
+            i=(i-1+images.length)%images.length;
+            showImage();
+        }
+    </script>
+</body>
+</html>
